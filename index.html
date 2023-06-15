@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/favicon/imageedit_1_4180870502.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="nav-bar">
+
+    <div class="left">
+        <h3>CRISTIANO RONALDO</h3>
+    </div>
+    <div class="right">
+        <h3 id="one" class="onee" onclick="one()">CR7</h3>
+        <h3 id="two" onclick="two()">CAREER HIGHLIGHTS</h3>
+        <h3 id="three" onclick="three()">BRANDS</h3>
+        <h3 id="four" onclick="four()">NEWSLETTER</h3>
+        <h3 id="five" onclick="five()">PARTNERS</h3>
+    </div>
+
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-one">
+           <video src="CR7_WebsiteHighlights-Carrousel-2023-Vertical.mp4" autoplay loop></video>
+        </div>
+        <div class="carousel-two">
+           <img src="favicon/brand_ursu.jpg" alt="">
+        </div>
+        <div class="carousel-three">
+            <img src="favicon/brand_eyewear.jpg" alt="">
+        </div>
+        <div class="carousel-four">
+            <img src="favicon/brand_underwear.jpg" alt="">
+        </div>
+        <div class="carousel-five">
+            <img src="favicon/brand_fragrances.jpg" alt="">
+        </div>
+        <div class="carousel-six">
+            <img src="favicon/brand_footwear.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var onen = document.getElementById("one");
+        var twon = document.getElementById("two");
+        var threen = document.getElementById("three");
+        var fourn = document.getElementById("four");
+        var fiven = document.getElementById("five");
+
+        function one(){
+            onen.classList.add("strike");
+            twon.classList.remove("strike");
+            threen.classList.remove("strike");
+            fourn.classList.remove("strike"); 
+            fiven.classList.remove("strike");
+        }
+        function two(){
+            twon.classList.add("strike");
+            onen.classList.remove("strike");
+            threen.classList.remove("strike");
+            fourn.classList.remove("strike"); 
+            fiven.classList.remove("strike");
+            onen.style.opacity="0.45";
+            onen.classList.remove("onee");
+        }
+        function three(){
+            threen.classList.add("strike");
+            onen.classList.remove("strike");
+            twon.classList.remove("strike");
+            fourn.classList.remove("strike"); 
+            fiven.classList.remove("strike");
+            onen.style.opacity="0.45";
+            onen.classList.remove("onee");
+        }
+        function four(){
+            fourn.classList.add("strike");
+            onen.classList.remove("strike");
+            twon.classList.remove("strike");
+            threen.classList.remove("strike"); 
+            fiven.classList.remove("strike");
+            onen.style.opacity="0.45";
+            onen.classList.remove("onee");
+        }
+        function five(){
+            fiven.classList.add("strike");
+            onen.classList.remove("strike");
+            twon.classList.remove("strike");
+            fourn.classList.remove("strike"); 
+            threen.classList.remove("strike");
+            onen.style.opacity="0.45";
+            onen.classList.remove("onee");
+        }
+    </script>
+</body>
+</html>
