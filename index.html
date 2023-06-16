@@ -7,6 +7,7 @@
     <title>Cristiano Ronaldo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/favicon/imageedit_1_4180870502.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="nav-bar">
@@ -20,30 +21,80 @@
         <h3 id="three" onclick="three()">BRANDS</h3>
         <h3 id="four" onclick="four()">NEWSLETTER</h3>
         <h3 id="five" onclick="five()">PARTNERS</h3>
+        <input type="checkbox" id="check">
+        <label for="check" class="check">
+            <i class="fa fa-bars fa-lg"></i>
+        </label>
+        <div class="menu">
+            <div class="column">
+                <h3 id="one" class="onee" onclick="one()">CR7</h3>
+                <h3 id="two" onclick="two()">CAREER HIGHLIGHTS</h3>
+                <h3 id="three" onclick="three()">BRANDS</h3>
+                <h3 id="four" onclick="four()">NEWSLETTER</h3>
+                <h3 id="five" onclick="five()">PARTNERS</h3>
+            </div>
+            <div class="footer">
+                <h2>PRIVACY POLICY</h2>
+                <i class="fa fa-instagram fa-lg"></i>
+                <i class="fa fa-facebook fa-lg"></i>
+                <i class="fa fa-twitter fa-lg"></i>
+            </div>
+        </div>
     </div>
 
     </div>
 
     <div class="carousel">
-        <div class="carousel-one">
+        <div class="carousel-one" id="car-one" onmouseover="vata()" onmouseout="vataz()">
+            <div class="text" id="text1">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;" class="red">VIEW HIGHLIGHTS</h4>
+               </div>
            <video src="CR7_WebsiteHighlights-Carrousel-2023-Vertical.mp4" autoplay loop></video>
         </div>
-        <div class="carousel-two">
+        <div class="carousel-two" onmouseover="vata1()"onmouseout="vataz1()" id="car-two">
+            <div class="text1" id="text2">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;" class="red">VIEW HIGHLIGHTS</h4>
+               </div>
            <img src="brand_ursu.jpg" alt="">
         </div>
-        <div class="carousel-three">
+        <div class="carousel-two" id="car-three"onmouseout="vataz2()" onmouseout="vataz()">
+            <div class="text1" id="text3">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;" class="red">VIEW HIGHLIGHTS</h4>
+               </div>
             <img src="brand_eyewear.jpg" alt="">
         </div>
-        <div class="carousel-four">
+        <div class="carousel-two" id="car-four"onmouseout="vataz3()" onmouseover="vata3()">
+            <div class="text1" id="text4">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;" class="red">VIEW HIGHLIGHTS</h4>
+               </div>
             <img src="brand_underwear.jpg" alt="">
         </div>
-        <div class="carousel-five">
+        <div class="carousel-two" id="car-five"onmouseout="vataz4()" onmouseover="vata4()">
+            <div class="text1" id="text5">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;" class="red">VIEW HIGHLIGHTS</h4>
+               </div>
             <img src="brand_fragrances.jpg" alt="">
         </div>
-        <div class="carousel-six">
+        <div class="carousel-two" id="car-six" onmouseout="vataz5()" onmouseover="vata5()">
+            <div class="text1" id="text6">
+                <h3><bold>CAREER</bold> HIGHLIGHTS</h3>
+                <h4>Cristiano Ronaldo's highlights and achievements</h4>
+                <h4 style="margin-top:3.5%;"class="red">VIEW HIGHLIGHTS</h4>
+               </div>
             <img src="brand_footwear.jpg" alt="">
         </div>
     </div>
+    <div class="red-line"></div>
 
     <script>
         var onen = document.getElementById("one");
@@ -51,7 +102,12 @@
         var threen = document.getElementById("three");
         var fourn = document.getElementById("four");
         var fiven = document.getElementById("five");
-
+        var texts1 = document.getElementById("text1");
+        var texts2 = document.getElementById("text2");
+        var texts3 = document.getElementById("text3");
+        var texts4 = document.getElementById("text4");
+        var texts5 = document.getElementById("text5");
+        var texts6 = document.getElementById("text6");
         function one(){
             onen.classList.add("strike");
             twon.classList.remove("strike");
@@ -94,6 +150,14 @@
             threen.classList.remove("strike");
             onen.style.opacity="0.45";
             onen.classList.remove("onee");
+        }
+        function vata(){
+            texts1.style.opacity="1";
+            texts1.style.left = "20px";
+        }
+        function vataz(){
+            texts1.style.opacity="0";
+            texts1.style.left="-5px";
         }
     </script>
 </body>
