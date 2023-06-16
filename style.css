@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-html{
-  scroll-behaviour:smooth;
-}
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +9,9 @@ body {
   background-color: #000;
   height: 100vh;
   overflow-x: hidden;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -31,6 +30,9 @@ body {
   width: 100%;
   z-index: 999;
 }
+.nav-bar a {
+  text-decoration: none;
+}
 
 .left h3 {
   font-family: "Fjalla One", sans-serif !important;
@@ -47,6 +49,10 @@ body {
   flex: 20%;
   justify-content: flex-start;
   margin-left: 2%;
+  color: white;
+}
+.left a {
+  text-decoration: none;
   color: white;
 }
 
@@ -291,8 +297,8 @@ h3 {
     width: 95vw;
   }
   .text {
-    bottom: 160px !important;
-    left: 30px !important;
+    bottom: 105px !important;
+    left: 25px !important;
   }
   .text {
     opacity: 1 !important;
