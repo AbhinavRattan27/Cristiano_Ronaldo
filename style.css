@@ -6,8 +6,10 @@
 }
 
 body {
-  background-color: white;
+  background-color: #000;
   height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .nav-bar {
@@ -17,12 +19,13 @@ body {
           user-select: none;
   display: flex;
   background-color: black;
-  height: 7.1% !important;
+  height: 7% !important;
   align-items: center;
   font-family: "Poppins", sans-serif;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 
 .left h3 {
@@ -45,12 +48,12 @@ body {
 
 .right {
   flex: 80%;
-  margin-left: 27%;
+  margin-left: 40.5%;
   justify-content: flex-start;
   gap: 2.2em;
 }
 .right h3 {
-  font-size: 1em;
+  font-size: 0.85em;
   cursor: pointer;
   opacity: 0.45;
   transition: 0.35s ease;
@@ -92,52 +95,280 @@ h3 {
 }
 
 .carousel {
+  margin-top: 3%;
   margin-left: 1.8%;
   display: flex;
-  gap: 1em;
-  height: 85%;
-  width: 95% !important;
+  gap: 0.75em;
+  height: 87.6%;
+  width: 100vw;
+  border-radius: 1px;
 }
 .carousel .carousel-one {
-  flex: 25%;
-  width: 100%;
   height: 100%;
+  width: 25%;
+  cursor: pointer;
 }
 .carousel .carousel-one video {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .carousel .carousel-two {
-  flex: 12.5%;
-  width: 100%;
+  height: 100%;
+  width: 13.25%;
+  cursor: pointer;
 }
 .carousel .carousel-two img {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.carousel .carousel-three {
-  flex: 12.5%;
+.carousel div {
+  filter: grayscale(80%);
+}
+.carousel div:hover {
+  filter: grayscale(0);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  width: 20%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey !important;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+@media screen and (min-width: 1220px) and (max-width: 1344px) {
+  .right {
+    margin-left: 34.5%;
+  }
+}
+.small {
+  width: 13.25%;
+}
+
+.large {
+  width: 25%;
+}
+
+.carousel-two:hover, .carousel-one:hover {
+  width: 25%;
+}
+
+.carousel-two, .carousel-one {
+  transition: 2s ease;
+  transition-delay: 0.45s;
+}
+
+@media screen and (max-width: 790px) {
+  .check {
+    color: white;
+    cursor: pointer;
+    display: block !important;
+  }
+  #check {
+    display: none;
+  }
+  .right h3 {
+    display: none;
+  }
+  .right {
+    flex: 50%;
+    justify-content: flex-end;
+    gap: 2.2em;
+    margin-right: 2.5%;
+  }
+  .right h3 {
+    font-size: 0.85em;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: 0.35s ease;
+    letter-spacing: 3px;
+    color: white;
+  }
+  .right h3:hover {
+    opacity: 1;
+  }
+  .right #one {
+    opacity: 1;
+  }
+  .left {
+    flex: 50%;
+  }
+}
+#check, .check {
+  display: none;
+}
+
+.menu {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  top: 50px;
+  left: -200%;
+  position: fixed;
+  text-align: center;
+  transition: 1.4s all ease;
+}
+.menu .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 35%;
+  left: 50%;
+  font-size: 1.5rem;
+  transform: translate(-50%, -20%);
+}
+.menu .column h3 {
+  display: block;
+}
+.menu .footer {
+  display: flex;
+  color: white;
+  position: fixed;
+  bottom: 34px;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
-.carousel .carousel-three img {
-  height: 100%;
+.menu .footer i {
+  margin-right: 3%;
 }
-.carousel .carousel-four {
-  flex: 12.5%;
-  width: 100%;
+.menu .footer h2 {
+  margin-right: 20%;
 }
-.carousel .carousel-four img {
-  height: 100%;
+
+#check:checked ~ .menu {
+  left: 0;
 }
-.carousel .carousel-five {
-  flex: 12.5%;
-  width: 100%;
+
+@media screen and (max-width: 1300px) {
+  #car-four, #car-five, #car-six {
+    display: none;
+  }
+  #car-one, #car-two, #car-three {
+    width: 70%;
+  }
+  .carousel-one {
+    margin-left: 2%;
+  }
+  .text {
+    bottom: 160px !important;
+    left: 30px !important;
+  }
 }
-.carousel .carousel-five img {
-  height: 100%;
+@media screen and (max-width: 650px) {
+  #car-two, #car-three {
+    display: none;
+  }
+  #car-one {
+    width: 95vw;
+  }
+  .text {
+    bottom: 160px !important;
+    left: 30px !important;
+  }
+  .text {
+    opacity: 1 !important;
+  }
+  .red-line {
+    margin-top: 4.95% !important;
+  }
 }
-.carousel .carousel-six {
-  flex: 12.5%;
-  width: 100%;
+.text {
+  color: rgb(231, 212, 212);
+  position: absolute;
+  bottom: 105px;
+  left: -5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1.65%;
+  transition: 0.7s ease all;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  z-index: 999;
 }
-.carousel .carousel-six img {
-  height: 100%;
+.text h4 {
+  font-size: 0.75em;
+}
+
+.text1 {
+  color: rgb(246, 238, 238);
+  position: absolute;
+  bottom: 105px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1.65%;
+  transition: 0.7s ease all;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  z-index: 999;
+}
+.text1 h4 {
+  font-size: 0.75em;
+}
+
+.red {
+  transition: 0.4s ease-in;
+}
+.red:hover {
+  color: rgb(250, 19, 19);
+}
+
+.red-line {
+  background-color: red;
+  height: 3px;
+  margin-left: 1.85%;
+  margin-top: 3%;
+  opacity: 0.74;
+  -webkit-animation: 5.2s ease liner infinite;
+          animation: 5.2s ease liner infinite;
+}
+
+@-webkit-keyframes liner {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 90vw;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes liner {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 90vw;
+  }
+  100% {
+    width: 0%;
+  }
 }/*# sourceMappingURL=style.css.map */
